@@ -5,10 +5,22 @@
 .DESCRIPTION
     This code will query the machine for and scrape data used to determine Windows 11 compatability including TPM, CPU, Memory, Hard Drive Space, OS Version and More
 
+.NinjaOne Definations
+    TPMver =
+            2c12064a-8fa8-4856-be3b-8ec7d4afd827 = Unknown
+            e1986642-d42e-4593-bcc7-51ddb079a61a = Not Present
+            1b49c0de-faba-4265-8b38-3e845313665c = 1.0
+            f52af764-ebd0-4e32-b1ce-b599ab36a20b = 1.5
+            7022bd76-b3e9-431f-b04f-3464187b9c2b = 2.0
+            106fc692-17fc-4164-aca7-1e192a511d67 = 2.5
+    TPMCompatibility = 
+            0cbd061a-8687-4b8b-b0a9-517f45b978ad = False
+            44f8f66d-add4-4e72-9b50-98848fa90371 = Unknown
+            c20ae679-d2fd-4f90-8614-5f58b413b81d = True
 .NOTES
-    Author: Christopher Sparrowgrove
-    Date: 20 Sept 2023
-    Version: 1.0
+    Author: SilentPS, LLC
+    Date: 26 FEBUARY 2025
+    Version: 2.0
     License: Proprietary. All Rights Reserved.
     License URI: https://itninjastechnology.com/?page=licensing
 
