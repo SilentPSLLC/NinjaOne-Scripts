@@ -20,23 +20,24 @@ This script was created with the assistance of ChatGPT (https://openai.com/) - t
 
 #>
 
-# Check if TPM is present
-$tpm = Get-WmiObject -Namespace "Root\CIMv2\Security\MicrosoftTpm" -Class Win32_Tpm
+# Define Variables
+$GetTPM = Get-WmiObject -Namespace "Root\CIMv2\Security\MicrosoftTpm" -Class Win32_Tpm
+$TPMver = "Not Present"
+$TPMCompatibility = $false
 
-# Initialize variables
-$tpmVersion = "Not Present"
-$tpmCompatibility = $false
-
-# If TPM is present, get the version
-if ($tpm) {
-    $tpmVersion = $tpm.SpecVersion
-    $tpmCompatibility = $tpmVersion -match "2.0"
+# Run Logic: Check if TPM is present and its version matches 2.0
+if ($$GetTPM) {
+    # Check if the TPM version is exactly 2.0
+    if ($GetTPM.SpecVersion -match "2.0") {
+        $TPMver = "2.0"
+        $TPMCompatibility = $true
+    }
 }
 
 # Set the Ninja-Property-Set variables
 Ninja-Property-Set tpmVersion $tpmVersion
-Ninja-Property-Set windows11CompatibilityTpm $tpmCompatibility
+Ninja-Property-Set CompatibleTPM $tpmVersion
 
 # Display a confirmation message
-Write-Host "TPM Version: $tpmVersion"
-Write-Host "Windows 11 Compatible TPM: $tpmCompatibility"
+Write-Host "TPM Version: $TPMver"
+Write-Host "Windows 11 Compatible TPM: $TPMCompatibility"
