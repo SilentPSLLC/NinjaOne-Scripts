@@ -21,7 +21,8 @@
 #>    
 
 # Get the name of the installed processor
-$OSCaption = $($osInfo.Caption)
+#OSCaption = $($osInfo.Caption) Disabled, Doesn't work on all systems
+OSCaption =  Select-String "OS Name" | ForEach-Object { $_.Line -replace '^OS Name:\s*', '' })
 $SysArchVer = if ([System.Environment]::Is64BitOperatingSystem) { "64-bit" } else { "32-bit" }
 $OSName = "$OSCaption ($SysArchVer)"
 $OldOSName = Ninja-Property-Get osVersion
