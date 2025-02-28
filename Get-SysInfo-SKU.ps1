@@ -7,14 +7,14 @@
 
 .NOTES
 	Company: SilentPS, LLC
-  URL: https://silentps.com 
+	URL: https://silentps.com 
 	Created On: 21 January, 2024
 	Modified: 28 Febuarary, 2025
-  Version: 1.0
-  License: All Rights Reserved
+	Version: 1.0
+	License: All Rights Reserved
 
 .LINK
-    https://github.com/SilentPSLLC/NinjaOne-Scripts/
+	https://github.com/SilentPSLLC/NinjaOne-Scripts/
      
 .EXAMPLE
 	./Get-SysInfo-SKU.ps1
@@ -26,5 +26,5 @@ $OldSKU = Ninja-Property-Get computerProductId
   
   
 # Update and Return $SKU
- Ninja-Property-Set computerProductId $SKU
+Ninja-Property-Set computerProductId $SKU
 Write-Host "Updated SKU Code (Computer Product ID) from $OldSKU to $SKU Successfully"
