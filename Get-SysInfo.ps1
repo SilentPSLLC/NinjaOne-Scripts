@@ -66,24 +66,24 @@
      Retrieves and displays TPM version number of endpoint.
      
 .EXAMPLE
-	./Get-SystemInfo-Select.ps1
-	./Get-SystemInfo-Select.ps1 -Function SystemArchitecture
-	./Get-SystemInfo-Select.ps1 -Function RAMInfo
-	./Get-SystemInfo-Select.ps1 -Function RAMPartNumber 
-	./Get-SystemInfo-Select.ps1 -Function SystemTotalMemory 
-	./Get-SystemInfo-Select.ps1 -Function SystemSKUNumber 
-	./Get-SystemInfo-Select.ps1 -Function WindowsVersion
-	./Get-SystemInfo-Select.ps1 -Function BatteryName
-	./Get-SystemInfo-Select.ps1 -Function BatteryPercentage
-	./Get-SystemInfo-Select.ps1 -Function BatteryChargeCycles
-	./Get-SystemInfo-Select.ps1 -Function BatteryEstimatedRuntime
-	./Get-SystemInfo-Select.ps1 -Function BatteryStatus
-	./Get-SystemInfo-Select.ps1 -Function BatteryChemistry
-	./Get-SystemInfo-Select.ps1 -Function LastBootTime
-	./Get-SystemInfo-Select.ps1 -Function PhysicalDiskFriendlyName
-	./Get-SystemInfo-Select.ps1 -Function PhysicalDiskSerialNumber
-	./Get-SystemInfo-Select.ps1 -Function PhysicalDiskHealthStatus
-	./Get-SystemInfo-Select.ps1 -Function TPMInfo
+	./Get-SysInfo.ps1
+	./Get-SysInfo.ps1 -Function SystemArchitecture
+	./Get-SysInfo.ps1 -Function RAMInfo
+	./Get-SysInfo.ps1 -Function RAMPartNumber 
+	./Get-SysInfo.ps1 -Function SystemTotalMemory 
+	./Get-SysInfo.ps1 -Function SystemSKUNumber 
+	./Get-SysInfo.ps1 -Function WindowsVersion
+	./Get-SysInfo.ps1 -Function BatteryName
+	./Get-SysInfo.ps1 -Function BatteryPercentage
+	./Get-SysInfo.ps1 -Function BatteryChargeCycles
+	./Get-SysInfo.ps1 -Function BatteryEstimatedRuntime
+	./Get-SysInfo.ps1 -Function BatteryStatus
+	./Get-SysInfo.ps1 -Function BatteryChemistry
+	./Get-SysInfo.ps1 -Function LastBootTime
+	./Get-SysInfo.ps1 -Function PhysicalDiskFriendlyName
+	./Get-SysInfo.ps1 -Function PhysicalDiskSerialNumber
+	./Get-SysInfo.ps1 -Function PhysicalDiskHealthStatus
+	./Get-SysInfo.ps1 -Function TPMInfo
 
 #>
 
