@@ -1,6 +1,6 @@
 <#
 .SYNOPSIS
-	Scrapes system information from managed endpoints based on the slected parameters.
+	Scrapes system information from managed endpoints.
 
 .DESCRIPTION
 	This script retrieves the endpoint's SKU code as its needed durring warrenty lookup for certain systems. Primarily HP systems
