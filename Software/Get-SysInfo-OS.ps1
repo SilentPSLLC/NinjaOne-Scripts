@@ -22,11 +22,11 @@
 
 # Get the name of the installed processor
 #OSCaption = $($osInfo.Caption) Disabled, Doesn't work on all systems
-OSCaption =  Select-String "OS Name" | ForEach-Object { $_.Line -replace '^OS Name:\s*', '' })
+$OSCaption =  (systeminfo | Select-String "OS Name" | ForEach-Object { ($_ -split ":")[1].Trim() })
 $SysArchVer = if ([System.Environment]::Is64BitOperatingSystem) { "64-bit" } else { "32-bit" }
 $OSName = "$OSCaption ($SysArchVer)"
 $OldOSName = Ninja-Property-Get osVersion
 
 # Update and Return $DiskName
 Ninja-Property-Set osVersion $OSName
-Write-Host "Updated Disk Serial Number from $OldOSName to $OSName Successfully"
+Write-Host "Updated OS Version from $OldOSName to $OSName Successfully"
